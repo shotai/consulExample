@@ -3,7 +3,7 @@
 Example -- docker consul, nginx, consul-template, registrator
 
 ## /Consul
-Contains consul docker file. if want to change the configuration file's path, please overwrite the ENTRYPOINT. <br />
+If need to change the configuration file's path, please override the ENTRYPOINT. <br />
 Example: <br />
 ` ENTRYPOINT ["/bin/consul", "agent", "-server", "-config-dir=$PATH"] ` <br />
 Note: the environment variable cannot be translated in ENTRYPOINT unless use /bin/bash. <br />
