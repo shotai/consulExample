@@ -20,4 +20,16 @@ Note: <br />
 3. One cluster can only have one node in bootstrap mode. <br />
 4. The advertise address should be in the cluster ip range. <br />
 5. If the hostnames are same, please specify -node in consul configuration. <br />
+<br />
+## /Registrator
+Need to provide consul address. Add -ip flag to bind ip address. <br />
+<br />
+According to registrator doc, the best way is to use --net=host for docker run. <br />
+Need to configure the shared files when running. <br />
+Example cmd for DOCKER RUN <br />
+`docker run --net=host --name=resgistrator --rm --volume=/var/run/docker.sock:/tmp/docker.sock registrator ` <br />
+Note: <br />
+1. the CMD of docker file using default consul url (localhost:8500) <br />
+2. the `-ip` flage specified the ip address for register service. <br />
+3. the `-resync 10`  will resynchronize consul info every 10 seconds. <br />
 
