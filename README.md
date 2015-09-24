@@ -34,7 +34,7 @@ Note: <br />
 3. the `-resync 10`  will resynchronize consul info every 10 seconds. <br />
 <br />
 ## /nginxconsultemplate
-Need to provide consul address. -e CONSULADDR  <br />
+Need to provide consul address. `-e CONSULADDR`  <br />
 Add consul template file. <br />
 For socket io, need `ip_hash` for nginx <br />
 Example cmd for DOCKER RUN <br />
