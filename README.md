@@ -1,7 +1,7 @@
 # consulExample
 
 Example -- docker consul, nginx, consul-template, registrator
-
+<br />
 ## /Consul
 If need to change the configuration file's path, please override the ENTRYPOINT. <br />
 Example: <br />
@@ -36,5 +36,6 @@ Note: <br />
 ## /nginxconsultemplate
 Need to provide consul address. -e CONSULADDR  <br />
 Add consul template file. <br />
+For socket io, need `ip_hash` for nginx <br />
 Example cmd for DOCKER RUN <br />
 `docker run --net=host --name=nc --rm -e CONSULADDR=192.168.0.5 nc ` <br />
