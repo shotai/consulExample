@@ -27,13 +27,13 @@ Need to provide consul address. Add -ip flag to bind ip address. <br />
 According to registrator doc, the best way is to use --net=host for docker run. <br />
 Need to configure the shared files when running. <br />
 Example cmd for DOCKER RUN <br />
-`docker run --net=host --name=resgistrator --rm --volume=/var/run/docker.sock:/tmp/docker.sock registrator ` <br />
+`docker run --net=host --name=resgistrator --rm --volume=/var/run/docker.sock:/tmp/docker.sock registrator -consul=192.168.0.5 -ip=192.168.0.5` <br />
 Note: <br />
 1. the CMD of docker file using default consul url (localhost:8500) <br />
 2. the `-ip` flage specified the ip address for register service. <br />
 3. the `-resync 10`  will resynchronize consul info every 10 seconds. <br />
 ## /nginxconsultemplate
-Need to provide consul address. -e CONSULADDR <br />
+Need to provide consul address. -e CONSULADDR  <br />
 Add consul template file. <br />
 Example cmd for DOCKER RUN <br />
-`docker run --net=host --name=nc --rm nc ` <br />
+`docker run --net=host --name=nc --rm -e CONSULADDR=192.168.0.5 nc ` <br />
