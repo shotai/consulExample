@@ -32,4 +32,8 @@ Note: <br />
 1. the CMD of docker file using default consul url (localhost:8500) <br />
 2. the `-ip` flage specified the ip address for register service. <br />
 3. the `-resync 10`  will resynchronize consul info every 10 seconds. <br />
-
+## /nginxconsultemplate
+Need to provide consul address. -e CONSULADDR <br />
+Add consul template file. <br />
+Example cmd for DOCKER RUN <br />
+`docker run --net=host --name=nc --rm nc ` <br />
