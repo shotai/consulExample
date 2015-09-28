@@ -1,6 +1,5 @@
-# consulExample
+# docker thing
 
-Example -- docker consul, nginx, consul-template, registrator
 <br />
 ## /Consul
 If need to change the configuration file's path, please override the ENTRYPOINT. <br />
