@@ -11,7 +11,13 @@ RUN chmod 600 /etc/ha.d/authkeys
 COPY . /src
 RUN cd /src; npm install
 
-
 CMD /etc/init.d/heartbeat start; \
-sleep 20;
+sleep 20; \
+echo "sleep finished"; \
+cat /etc/ha.d/haresources; \
+cat /etc/hosts; \
+ip addr; \
+cat /var/log/ha-log; \
+cat /var/log/ha-debug; \
 node /src/app.js; \
+

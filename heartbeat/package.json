@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "description": "test",
+  "main": "app.js",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4"
+  }
+}
